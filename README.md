@@ -17,11 +17,12 @@ This tutorial series teaches you how to control Blender programmatically using P
 - **Procedural Generation** - Create complex scenes algorithmically
 - **Physics** - Rigid bodies, cloth, particles, and more
 - **Shader Nodes** - Advanced material creation
+- **Raytracing Mathematics** - Deep dive into rendering theory and optics
 - **Complete Workflows** - Bring it all together
 
 ## 🎯 Course Structure
 
-The tutorials are organized into 4 progressive levels:
+The tutorials are organized into 5 progressive levels:
 
 ### 📘 Level 1: Basics (Lessons 1-4)
 **Start here if you're new to Blender Python!**
@@ -59,6 +60,33 @@ The tutorials are organized into 4 progressive levels:
 | `11_physics_simulation.py` | Physics | Rigid bodies, cloth, particles, forces |
 | `12_shader_nodes.py` | Shader Nodes | Node trees, procedural textures, materials |
 | `13_complete_scene.py` | Complete Project | Everything combined into a full scene |
+
+### 🔬 Level 5: Raytracing Mathematics (Lessons 14-18)
+**Understanding the mathematics behind photorealistic rendering!**
+
+These tutorials go deep into the computer graphics theory and mathematics that power modern renderers. Each lesson includes **visual demonstrations** and **mathematical explanations**.
+
+| Script | Topic | What You'll Learn |
+|--------|-------|-------------------|
+| `14_raytracing_basics.py` | Ray Fundamentals | Ray equations, vectors, dot/cross products, visualization |
+| `15_ray_intersections.py` | Intersection Math | Ray-sphere, ray-plane, ray-triangle (Möller-Trumbore) |
+| `16_reflection_refraction.py` | Light Physics | Perfect mirrors, Snell's Law, total internal reflection |
+| `17_fresnel_advanced.py` | Advanced Optics | Fresnel equations, Beer's Law, Brewster's angle, dispersion |
+| `18_complete_raytracer.py` | Full Implementation | Complete working raytracer from scratch! |
+
+**Why Learn Raytracing Math?**
+- 🎨 Understand how Cycles and other renderers work
+- 🧮 Master the mathematics of realistic lighting
+- 🔧 Debug and optimize your renders better
+- 🚀 Build custom rendering tools
+- 📐 Deep understanding of computer graphics theory
+
+**What Makes These Special:**
+- ✨ **Visually Stunning** - Every concept is visualized in 3D
+- 📊 **Mathematical Rigor** - Complete equations with explanations
+- 🎯 **Interactive** - Run scripts to see math in action
+- 🏗️ **Build a Raytracer** - Culminates in working renderer
+- 🌈 **Photorealistic** - Learn what makes renders look real
 
 ## 🚀 Getting Started
 
