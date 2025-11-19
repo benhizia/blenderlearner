@@ -61,7 +61,7 @@ The tutorials are organized into 5 progressive levels:
 | `12_shader_nodes.py` | Shader Nodes | Node trees, procedural textures, materials |
 | `13_complete_scene.py` | Complete Project | Everything combined into a full scene |
 
-### 🔬 Level 5: Raytracing Mathematics (Lessons 14-18)
+### 🔬 Level 5: Raytracing Mathematics (Lessons 14-19)
 **Understanding the mathematics behind photorealistic rendering!**
 
 These tutorials go deep into the computer graphics theory and mathematics that power modern renderers. Each lesson includes **visual demonstrations** and **mathematical explanations**.
@@ -73,6 +73,7 @@ These tutorials go deep into the computer graphics theory and mathematics that p
 | `16_reflection_refraction.py` | Light Physics | Perfect mirrors, Snell's Law, total internal reflection |
 | `17_fresnel_advanced.py` | Advanced Optics | Fresnel equations, Beer's Law, Brewster's angle, dispersion |
 | `18_complete_raytracer.py` | Full Implementation | Complete working raytracer from scratch! |
+| `19_interactive_visualization.py` | **🎬 Animated Math!** | Watch formulas appear as 3D text alongside demos! |
 
 **Why Learn Raytracing Math?**
 - 🎨 Understand how Cycles and other renderers work
