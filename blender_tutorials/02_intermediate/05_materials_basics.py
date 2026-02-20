@@ -14,6 +14,8 @@ Learn how to create and apply materials:
 import bpy
 
 # Clear the scene
+
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
@@ -220,6 +222,11 @@ camera.name = "Camera"
 
 # Point camera at origin
 import math
+
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
 camera.rotation_euler = (math.radians(60), 0, math.radians(45))
 
 # Set as active camera

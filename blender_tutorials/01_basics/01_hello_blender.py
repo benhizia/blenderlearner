@@ -18,13 +18,20 @@ To run this script in Blender:
 
 import bpy
 
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
+
 # Print a welcome message to the console
+
 print("=" * 50)
 print("Welcome to Blender Python Scripting!")
 print("=" * 50)
 
 # Clear the default scene (remove default cube, light, camera)
 # This ensures we start with a clean slate
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 

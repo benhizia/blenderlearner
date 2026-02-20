@@ -14,11 +14,14 @@ This is the CORE of raytracing - finding where rays hit objects!
 """
 
 import bpy
+
 import math
 from mathutils import Vector
 import random
 
 # Clear the scene
+
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
@@ -365,6 +368,11 @@ v2 = Vector((6, 0, 2))
 
 # Create triangle mesh
 import bmesh
+
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
 mesh = bpy.data.meshes.new("TriangleMesh")
 bm = bmesh.new()
 

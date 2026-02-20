@@ -14,9 +14,12 @@ Learn how to use modifiers to procedurally modify geometry:
 """
 
 import bpy
+
 import math
 
 # Clear the scene
+
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
@@ -251,6 +254,11 @@ bpy.context.collection.objects.link(obj)
 
 # Create vertices and edges for a simple structure
 import bmesh
+
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
 bm = bmesh.new()
 v1 = bm.verts.new((0, -8, 0))
 v2 = bm.verts.new((0, -8, 1))
