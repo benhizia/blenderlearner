@@ -14,11 +14,19 @@ This tutorial visualizes the core concepts of raytracing!
 """
 
 import bpy
+
 import math
 from mathutils import Vector, Matrix
 import random
 
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
+
 # Clear the scene
+
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 

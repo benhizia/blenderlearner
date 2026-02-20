@@ -14,7 +14,14 @@ Learn essential operations for working with objects:
 
 import bpy
 
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
+
 # Clear the scene
+
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
@@ -46,6 +53,7 @@ print(f"Created: {cube.name}, {sphere.name}, {cylinder.name}")
 print("\n2. SELECTING OBJECTS")
 
 # Deselect all
+ensure_object_mode()
 bpy.ops.object.select_all(action='DESELECT')
 print("  Deselected all objects")
 
@@ -75,6 +83,7 @@ for obj in bpy.context.scene.objects:
 print("\n3. DUPLICATING OBJECTS")
 
 # Method 1: Using operator (requires selection)
+ensure_object_mode()
 bpy.ops.object.select_all(action='DESELECT')
 cube.select_set(True)
 bpy.context.view_layer.objects.active = cube
@@ -115,10 +124,12 @@ if obj_to_delete:
     print(f"  Deleted: CubeDuplicate_1")
 
 # Method 2: Delete using operator (requires selection)
+ensure_object_mode()
 bpy.ops.object.select_all(action='DESELECT')
 sphere_array_0 = bpy.data.objects.get("SphereArray_0")
 if sphere_array_0:
     sphere_array_0.select_set(True)
+    ensure_object_mode()
     bpy.ops.object.delete()
     print(f"  Deleted: SphereArray_0")
 

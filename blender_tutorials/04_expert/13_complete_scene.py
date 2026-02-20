@@ -16,11 +16,14 @@ all the techniques learned in previous lessons.
 """
 
 import bpy
+
 import math
 import random
 from mathutils import Vector
 
 # Clear the scene
+
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
@@ -171,6 +174,11 @@ def create_crystal(location, scale, color_hue):
 
     # Glass-like with color
     import colorsys
+
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
     rgb = colorsys.hsv_to_rgb(color_hue, 0.7, 1.0)
     bsdf.inputs['Base Color'].default_value = (rgb[0], rgb[1], rgb[2], 1)
     bsdf.inputs['Transmission'].default_value = 0.9

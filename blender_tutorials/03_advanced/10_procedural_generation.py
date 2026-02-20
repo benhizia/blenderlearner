@@ -13,12 +13,20 @@ Learn how to create complex scenes procedurally:
 """
 
 import bpy
+
 import bmesh
 import math
 import random
 from mathutils import Vector
 
+def ensure_object_mode():
+    if bpy.context.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+
+
 # Clear the scene
+
+ensure_object_mode()
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
